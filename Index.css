@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --color-bg: #00060e;
+    --color-primary: #9a9f17;
+    --color-secondary: #fee801;
+    --color-accent: #54c1e6;
+    --color-highlight: #39c4b6;
+    --color-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 20px;
+}
+
+/* Títulos */
+h2, h3 {
+    color: var(--color-secondary);
+    text-shadow: 0 0 10px var(--color-secondary);
+}
+
+/* Secciones */
+.Biografia, .contenido {
+    background: rgba(0, 6, 14, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--color-accent);
+    margin-bottom: 20px;
+}
+
+/* Datos personales */
+.Ficha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.Ficha img {
+    border-radius: 50%;
+    border: 3px solid var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent);
+}
+
+/* Lista de datos */
+.datos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(154, 159, 23, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.datos:hover {
+    background: var(--color-highlight);
+    box-shadow: 0 0 10px var(--color-highlight);
+}
+
+/* Habilidades */
+.habilidades {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.habilidades li {
+    background: var(--color-primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.habilidades li:hover {
+    background: var(--color-highlight);
+    box-shadow: 0 0 10px var(--color-highlight);
+}
+
+/* Línea de tiempo */
+.linea_tiempo {
+    border-left: 3px solid var(--color-secondary);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.linea_tiempo::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: var(--color-secondary);
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-secondary);
+}
+
+/* Años */
+.año span {
+    font-size: 1.2em;
+    color: var(--color-accent);
+    text-shadow: 0 0 5px var(--color-accent);
+}
+
+/* Iconos */
+i {
+    color: var(--color-secondary);
+    font-size: 1.5em;
+    text-shadow: 0 0 5px var(--color-secondary);
+}
