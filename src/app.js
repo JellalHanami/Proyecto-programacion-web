@@ -1,18 +1,18 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
+const express = require('express'); // Importar Express
+const cors = require('cors'); // Importar CORS
+const app = express(); // Crear una instancia de Express
 
-app.use(express);
+app.use(express.json()); // Habilitar el uso de JSON en las solicitudes
+app.use(cors()); // Habilitar CORS
 
-app.use(express.json());
-app.use(cors());
-
+// Importar rutas
 const userRoutes = require('./routes/user.routes');
-const authRoutes = require('./routes/auth.routes');
-const projectRoutes = require('./routes/projec.routes');
+const authRoutes =  require('./routes/auth.routes');
+const projectRoutes = require('./routes/project.routes');
 
-app.use('/api/v1', userRoutes);
-app.use('/api/v1', authRoutes);
-app.use('/api/v1', projectRoutes);
+// Definir rutas
+app.use('/api/v1/', userRoutes);
+app.use('/api/v1/', authRoutes);
+app.use('/api/v1/', projectRoutes);
 
 module.exports = app;

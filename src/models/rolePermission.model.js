@@ -1,8 +1,8 @@
 const {DataTypes} = require('sequelize');
 const sequelize = require('../config/db');
 
+// Modelo de asociación de roles y permisos
 const RolePermission = sequelize.define('roles_permisos', {
-    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     rol_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
